@@ -7,184 +7,79 @@
     <meta name="keywords" content="Aoudia Nour Islam, Développeur Web, HTML, CSS, JavaScript, hacker portfolio4321234">
     <link rel="icon" type="png" href="icon.png">
     <title>About me</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-        #contact ul li a img {
-            width: 30px;
-            height: 30px;
-            margin-right: 10px;
-            vertical-align: middle;
-            color: black;
-        }
-
         #photo img {
             display: block;
             margin: 0 auto;
             width: 250px;
-            transition: transform 1s ease; /* Transition fluide */
+            transition: transform 1s ease;
             border-radius: 30px;
         }
 
         #photo img:hover {
-            transform: rotateY(5deg) rotateX(5deg) scale(1.2); /* Rotation pour l'effet 3D */
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #000000; /* Mode sombre */
-            color: #ffffff; /* Texte en blanc */
-        }
-
-        .container {
-            width: 75%;
-            margin: auto;
-            overflow: hidden;
-        }
-
-        header {
-            background: #000000;
-            color: #fff;
-            padding-top: 20px;
-            min-height: 50px;
-        }
-
-        header a {
-            color: #fff;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-size: 16px;
-        }
-
-        header ul {
-            padding: 0;
-            list-style: none;
-        }
-
-        header li {
-            float: left;
-            display: inline;
-            padding: 0 20px 0 20px;
-        }
-
-        header #branding {
-            float: left;
-        }
-
-        header #branding h1 {
-            margin: 0;
-        }
-
-        header nav {
-            float: right;
-            margin-top: 10px;
-        }
-
-        #showcase {
-            min-height: 100px;
-            background: url('showcase.jpg') no-repeat 0 -400px;
-            text-align: center;
-            color: #ffffff;
-        }
-
-        #showcase h1 {
-            margin-top: 100px;
-            font-size: 55px;
-            margin-bottom: 10px;
-        }
-
-        #showcase p {
-            font-size: 20px;
-        }
-
-        #main {
-            padding: 20px;
-            background: #000000;
-            color: #fff;
-        }
-
-        #main h2 {
-            text-align: center;
-        }
-
-        footer {
-            padding: 20px;
-            margin-top: 20px;
-            color: #fff;
-            background-color: #000000;
-            text-align: center;
+            transform: rotateY(5deg) rotateX(5deg) scale(1.08);
         }
     </style>
 </head>
-<body>
-    <header class="bg-dark text-white">
-        <div class="container">
+<body class="bg-black text-white">
+    <header class="bg-gray-900 text-white py-4">
+        <div class="container mx-auto flex justify-between items-center">
             <div id="branding">
-                <h1>Aoudia Nour Islam</h1>
+                <h1 class="text-2xl font-bold">Aoudia Nour Islam</h1>
             </div>
             <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#about">À propos</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#work">Mes Travaux</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                <ul class="flex space-x-4">
+                    <li><a class="hover:text-gray-400" href="#about">À propos</a></li>
+                    <li><a class="hover:text-gray-400" href="#work">Mes Travaux</a></li>
+                    <li><a class="hover:text-gray-400" href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="showcase" class="bg-dark text-white">
-        <div class="container">
-            <h1>Bienvenue sur ma page personnelle</h1>
-            <p>Découvrez qui je suis et mes réalisations</p>
+    <section id="showcase" class="bg-gray-800 text-white text-center py-20" style="background: url('showcase.jpg') no-repeat center center; background-size: cover;">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold">Bienvenue sur ma page personnelle</h1>
+            <p class="text-xl mt-4">Découvrez qui je suis et mes réalisations</p>
         </div>
     </section>
 
-    <section id="main" class="bg-secondary text-white">
-        <div class="container">
-            <h2 id="about">À propos de moi</h2>
-            <p class="text-center">Bonjour, je m'appelle Aoudia Nour Islam. Je suis passionné par le développement web et j'aime créer des sites web interactifs et dynamiques. J'ai de l'expérience dans plusieurs technologies web et je suis toujours à la recherche de nouveaux défis.</p>
-            <section id="photo">
-                <div class="container">
-                    <h2>Ma Photo</h2>
-                    <img src="Me.jpeg" alt="Photo de Aoudia Nour Islam" class="img-fluid rounded mx-auto d-block">
-                </div>
+    <section id="main" class="bg-gray-900 text-white py-10">
+        <div class="container mx-auto">
+            <h2 id="about" class="text-3xl font-bold text-center mb-6">À propos de moi</h2>
+            <p class="text-center mb-10">Bonjour, je m'appelle Aoudia Nour Islam. Je suis passionné par le développement web et j'aime créer des sites web interactifs et dynamiques. J'ai de l'expérience dans plusieurs technologies web et je suis toujours à la recherche de nouveaux défis.</p>
+            <section id="photo" class="text-center mb-10">
+                <h2 class="text-2xl font-bold mb-4">Ma Photo</h2>
+                <img src="Me.jpeg" alt="Photo de Aoudia Nour Islam" class="rounded-full mx-auto">
             </section>
 
-            <h2 id="work">Mes Travaux</h2>
-            <p>Voici quelques-uns de mes projets récents :</p>
-            <ul>
-                <li>Projet 1: Gestionnaire d'Hôtel (Java)</li>
+            <h2 id="work" class="text-3xl font-bold text-center mb-6">Mes Travaux</h2>
+            <p class="text-center mb-6">Voici quelques-uns de mes projets récents :</p>
+            <ul class="list-disc list-inside space-y-4">
+                <li>Projet 1: Gestionnaire d'Hôtel (Java) <a href="https://github.com/NorIslam04/Hotel" class="text-blue-400 hover:underline">Lien de Repo</a></li>
                 <li>Projet 2: Jeux De Dames (Assembleur 8086)</li>
                 <li>Projet 3: Soon...</li>
             </ul>
         </div>
     </section>
 
-    <section id="contact" class="bg-dark text-white">
-        <div class="container">
-            <h2>Contactez-moi</h2>
-            <p>Vous pouvez me retrouver sur les réseaux sociaux ou m'envoyer un email :</p>
-            <ul class="list-unstyled text-center">
-                <li><a class="text-white" href="https://www.instagram.com/n0r.islam" target="_blank">Instagram</a></li>
-                <br>
-                <li><a class="text-white" href="https://github.com/NorIslam04" target="_blank">GitHub</a></li>
-                <br>
-                <li><a class="text-white" href="mailto:islamaoudia18@gmail.com">Email</a></li>
-                <br>
-                <li><a class="text-white" href="tel:0698553662">Appelle-Moi</a></li>
+    <section id="contact" class="bg-gray-800 text-white py-10">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Contactez-moi</h2>
+            <p class="mb-6">Vous pouvez me retrouver sur les réseaux sociaux ou m'envoyer un email :</p>
+            <ul class="space-y-4">
+                <li><a class="text-blue-400 hover:underline" href="https://www.instagram.com/n0r.islam" target="_blank">Instagram</a></li>
+                <li><a class="text-blue-400 hover:underline" href="https://github.com/NorIslam04" target="_blank">GitHub</a></li>
+                <li><a class="text-blue-400 hover:underline" href="mailto:islamaoudia18@gmail.com">Email</a></li>
+                <li><a class="text-blue-400 hover:underline" href="tel:0698553662">Appelle-Moi</a></li>
             </ul>
         </div>
     </section>
 
-    <footer class="bg-dark text-white text-center">
+    <footer class="bg-gray-900 text-white text-center py-4">
         <p>&copy; 2024 Aoudia Nour Islam. Tous droits réservés.</p>
     </footer>
-
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
