@@ -64,19 +64,92 @@
     margin-right: 80px;
   }
 
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, 300px);
+    grid-template-rows: repeat(2, 180px);
+    grid-template-areas: "a b" "c b";
+    gap: 16px;
+    justify-content: center;
+    width: 70%;
+    margin:0 auto;
+}
+
+.red {
+  background-color: #06b5d4d1;
+  grid-area: a;
+}
+
+.blue {
+  background-color: #d846efd3;
+  grid-area: b;
+}
+
+.green {
+  background-color: #f59f0be0;
+  grid-area: c;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  transition: 400ms;
+  padding : 10px;
+  line-height: 31px;
+}
+
+.cards .card p.tip {
+  font-size: 1.3em;
+  font-weight: 700;
+  color:#111827
+}
+
+.cards .card p.second-text {
+  font-size: 1em;
+    color: white;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.cards .card:hover {
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px #4444;
+}
+
+.cards:hover > .card:not(:hover) {
+  filter: blur(4px);
+  transform: scale(0.9, 0.9);
+}
+
+.link{
+    color: rgb(0, 0, 0);
+    font-size: 0.9em;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
   
 
-        #photo img {
-            display: block;
-            margin: 0 auto;
-            width: 250px;
-            transition: transform 1s ease;
-            border-radius: 30px;
+#photo img {
+    display: block;
+    margin: 0 auto;
+    width: 250px;
+    transition: transform 1s ease;
+    border-radius: 30px;
         }
 
-        #photo img:hover {
-            transform: rotateY(6deg) rotateX(6deg) scale(1.08);
-        }
+#photo img:hover {
+    transform: rotateY(6deg) rotateX(6deg) scale(1.08);
+}
     </style>
 </head>
 <body class="bg-black text-white">
@@ -110,14 +183,27 @@
             <section id="photo" class="text-center mb-10">
                 <img src="Me.jpg" alt="Photo de Aoudia Nour Islam" class="rounded-full mx-auto">
             </section>
-
             <h2 id="work" class="text-3xl font-bold text-center mb-6">Mes Travaux</h2>
-            <ul class="list-disc list-inside space-y-4">
-                <li>Projet 1: Gestionnaire d'Hôtel (Java) - <a href="https://github.com/NorIslam04/Hotel" class="text-blue-400 hover:underline">Lien de Repositorie</a></li>
-                <li>Projet 2: Jeux De Dames (Assembleur 8086) - <a href="https://github.com/NorIslam04/asm.git" class="text-blue-400 hover:underline">Lien de Repositorie</a></li>
-                <li>Projet 3: Python (Django) - Soon...</li>
-            </ul>
+            <div class="cards">
+                
+                <div class="card red">
+                  <p class="tip">Project 2</p>
+                  <p class="second-text">Jeux De Dames (Assembleur 8086)</p>
+                  <a class="link" href="https://github.com/NorIslam04/asm">Link To Repositorie</a>
+                </div>
+                <div class="card blue">
+                  <p class="tip">Project 1</p>
+                  <p class="second-text">Gestionnaire d'Hôtel (Java)</p>
+                  <a class="link" href="https://github.com/NorIslam04/Hotel">Link To Repositorie</a>
+                </div>
+                <div class="card green">
+                  <p class="tip">Project 3</p>
+                  <p class="second-text">Back-End (python: Django)</p>
+                  <a class="link" href="">Soon..</a>
+                </div>
+              </div>
         </div>
+   
     </section>
 
     <section class="contact" class="bg-gray-800 text-white py-10">
