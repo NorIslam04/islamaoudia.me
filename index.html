@@ -10,6 +10,62 @@
     <!-- Tailwind CSS -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
+
+.contact {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+  }
+  
+  .contact .glass {
+    position: relative;
+    width: 180px;
+    height: 250px;
+    background: linear-gradient(rgba(255, 255, 255, 0.899), transparent);
+    border: 1px solid rgb(94, 94, 94);
+    box-shadow: 0 25px 25px rgba(0, 0, 0, 0.25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 10px;
+    margin: 0 -45px;
+    backdrop-filter: blur(10px);
+    transform: rotate(calc(var(--r) * 1deg));
+  }
+  
+  .contact:hover .glass {
+    transform: rotate(0deg);
+    margin: 0 10px;
+  }
+  
+  .contact .glass::before {
+    content: attr(data-text);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 40px;
+    background:#000236e4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f7f7f7;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius:10px ;
+  }
+  .contact .glass svg {
+    font-size: 2.5em;
+    fill: #000236e4;
+    
+  }
+  #contact {
+    margin-right: 80px;
+  }
+
+  
+
         #photo img {
             display: block;
             margin: 0 auto;
@@ -64,15 +120,33 @@
         </div>
     </section>
 
-    <section id="contact" class="bg-gray-800 text-white py-10">
-        <div class="container mx-auto text-center">
-            <h2 class="text-3xl font-bold mb-6">Contactez-moi</h2>
-            <ul class="space-y-4">
-                <li><a class="text-blue-400 hover:underline" href="https://github.com/NorIslam04" target="_blank">GitHub</a></li>
-                <li><a class="text-blue-400 hover:underline" href="mailto:islamaoudia18@gmail.com">Email</a></li>
-                <li><a class="text-blue-400 hover:underline" href="tel:0698553662">Appelle-Moi</a></li>
-            </ul>
-        </div>
+    <section class="contact" class="bg-gray-800 text-white py-10">
+        <h1 id="contact" class="text-3xl font-bold text-center mb-6">Contactez-moi</h1>
+        <a data-text="Github" style="--r:-15;" class="glass" href="https://github.com/NorIslam04">
+            <svg viewBox="0 0 496 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"
+              ></path>
+            </svg>
+        </a>
+
+          <a data-text="Phone-Number" style="--r:5;" class="glass" href="tel:0698553662">
+            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M493.4 24.6l-104-24c-11.7-2.7-23.6 3.3-28.6 14.3l-48 112c-4.3 10.1-2.1 21.8 5.4 29.6l48 48c-31.2 56.1-80.6 105.5-136.7 136.7l-48-48c-7.8-7.5-19.5-9.7-29.6-5.4l-112 48c-11 5-17 16.9-14.3 28.6l24 104c2.7 11.7 13.3 20 25.4 20 256.5 0 464-207.5 464-464 0-12.1-8.3-22.7-20-25.4z"
+              ></path>
+            </svg>
+    
+        </a>
+            
+          <a data-text="Email" href="mailto:islamaoudia18@gmail.com" style="--r:25;" class="glass">
+            <svg viewBox="0 0 512 512" height="1em" xmlns="http://www.w3.org/2000/svg">
+                <path                
+                d="M502.3 190.8L327.4 338.8c-15.1 13.3-37.7 13.3-52.8 0L9.7 190.8C3.9 185.7 0 178.1 0 170.1V48c0-26.5 21.5-48 48-48h416c26.5 0 48 21.5 48 48v122.1c0 8-3.9 15.6-9.7 20.7zM464 64H48c-8.8 0-16 7.2-16 16v86.1l208 183.5c6.2 5.5 15.8 5.5 22 0l208-183.5V80c0-8.8-7.2-16-16-16zM48 448h416c26.5 0 48-21.5 48-48V192.1c0-8-3.9-15.6-9.7-20.7L327.4 338.8c-15.1 13.3-37.7 13.3-52.8 0L9.7 190.8C3.9 185.7 0 178.1 0 170.1V400c0 26.5 21.5 48 48 48z"
+                ></path>
+                
+            </svg>
+        </a>
     </section>
 
     <footer class="bg-gray-900 text-white text-center py-4">
