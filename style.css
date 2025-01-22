@@ -176,3 +176,80 @@
         align-items: center; /* Aligne les éléments au même niveau vertical */
         margin-bottom: 30px;
     }
+    @media screen and (max-width: 768px) {
+      /* Section cards */
+      .cards {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 180px);
+        grid-template-areas: 
+          "a"
+          "b"
+          "c";
+        width: 90%;
+        gap: 20px;
+      }
+    
+      /* Section contact */
+      .contact {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 0;
+      }
+    
+      .contact .glass {
+        width: 150px;
+        height: 200px;
+        margin: 10px 0;
+      }
+    
+      .contact:hover .glass {
+        transform: none;
+        margin: 10px 0;
+      }
+    
+      /* Section à propos */
+      #la {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      .card0, .card2 {
+        width: 90%;
+        margin: 0 auto;
+      }
+    
+      #photo img {
+        margin: 20px auto;
+        width: 200px;
+      }
+    }
+    
+    @media screen and (max-width: 480px) {
+      /* Header */
+      header .container {
+        flex-direction: column;
+        text-align: center;
+      }
+    
+      nav ul {
+        margin-top: 15px;
+      }
+    
+      /* Showcase */
+      #showcase h1 {
+        font-size: 2.5rem;
+      }
+    
+      /* Cards */
+      .cards .card {
+        padding: 5px;
+      }
+    
+      .cards .card p.tip {
+        font-size: 1.1em;
+      }
+    
+      .cards .card p.second-text {
+        font-size: 0.9em;
+      }
+    }
